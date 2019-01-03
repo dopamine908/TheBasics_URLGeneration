@@ -23,3 +23,11 @@ Route::get('/', function () {
 */
 Route::get('seeUrl', 'UrlController@seeUrl');
 Route::get('Demo/{id?}', 'UrlController@demo');
+
+/*
+|--------------------------------------------------------------------------
+| 設定 url 變數的預設值
+|--------------------------------------------------------------------------
+*/
+Route::get('{this_is_test}/demo_route', 'UrlController@UrlDefaults')->name('this_is_test');
+Route::get('see_demo_route', 'UrlController@seeUrlDefaults');

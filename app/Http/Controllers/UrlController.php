@@ -58,4 +58,16 @@ class UrlController extends Controller
         dump(action('UrlController@demo'));
         dump(URL::action('UrlController@demo'));
     }
+
+    public function UrlDefaults() {
+
+    }
+
+
+    /**
+     * 查看有預設變數的route
+     */
+    public function seeUrlDefaults() {
+        dump(URL::route('this_is_test'));
+    }
 }
